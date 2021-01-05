@@ -1,6 +1,8 @@
 package com.alsa;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
  * @Created with IDEA
@@ -10,5 +12,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Description:
  */
 @SpringBootApplication
+@EnableEurekaServer
 public class Application {
+    public static void main(String[] args) {
+        new SpringApplicationBuilder(Application.class).run(args);
+    }
 }
